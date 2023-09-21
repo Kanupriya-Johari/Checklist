@@ -62,80 +62,100 @@
     </style>
 </head>
 <body>
+    <h2>DP Topics Checklist</h2>
 
-<h2>DP Topics Checklist</h2>
+    <div id="checklist">
+        <section>
+            <h3>Dynamic Programming</h3>
+            <ul>
+                <li onclick="toggleCheck(this)">Introduction</li>
+                <li onclick="toggleCheck(this)">Recursion</li>
+                <li onclick="toggleCheck(this)">Recursion DP</li>
+                <li onclick="toggleCheck(this)">Iteration</li>
+                <li onclick="toggleCheck(this)">Iteration Space Optimized</li>
+                <li onclick="toggleCheck(this)">Complexity Analysis</li>
+                <li onclick="toggleCheck(this)">0/1 Knapsack</li>
+                <li onclick="toggleCheck(this)">Subset Questions</li>
+                <li onclick="toggleCheck(this)">Unbounded Knapsack</li>
+                <li onclick="toggleCheck(this)">String DP</li>
+                <li onclick="toggleCheck(this)">Subsequence questions</li>
+                <!-- ... add other DP topics similarly -->
+            </ul>
+        </section>
+        <section>
+            <h3>Trees</h3>
+            <ul>
+                <li onclick="toggleCheck(this)">Introduction</li>
+                <li onclick="toggleCheck(this)">Binary Trees</li>
+                <li onclick="toggleCheck(this)">Binary Search Trees</li>
+                <li onclick="toggleCheck(this)">DFS</li>
+                <li onclick="toggleCheck(this)">BFS</li>
+                <li onclick="toggleCheck(this)">AVL Trees</li>
+                <li onclick="toggleCheck(this)">Segment Tree</li>
+                <li onclick="toggleCheck(this)">Fenwick Tree / Binary Indexed Tree</li>
+                <li onclick="toggleCheck(this)">Square Root Decomposition</li>
+                <!-- ... add other Trees topics similarly -->
+            </ul>
+        </section>
+        <section>
+            <h3>Heaps</h3>
+            <ul>
+                <li onclick="toggleCheck(this)">Introduction</li>
+                <li onclick="toggleCheck(this)">Theory</li>
+                <li onclick="toggleCheck(this)">Priority Queue</li>
+                <li onclick="toggleCheck(this)">Two Heaps Method</li>
+                <li onclick="toggleCheck(this)">k-way merge</li>
+                <li onclick="toggleCheck(this)">top k elements</li>
+                <li onclick="toggleCheck(this)">interval problems</li>
+                <!-- ... add other Heaps topics similarly -->
+            </ul>
+        </section>
+        <section>
+            <h3>Graphs</h3>
+            <ul>
+                <li onclick="toggleCheck(this)">Introduction</li>
+                <li onclick="toggleCheck(this)">BFS</li>
+                <li onclick="toggleCheck(this)">DFS</li>
+                <li onclick="toggleCheck(this)">Working with graph components</li>
+                <li onclick="toggleCheck(this)">Minimum Spanning Trees</li>
+                <li onclick="toggleCheck(this)">Kruskal Algorithm</li>
+                <li onclick="toggleCheck(this)">Prims Algorithm</li>
+                <li onclick="toggleCheck(this)">Dijkstra’s shortest path algorithm</li>
+                <li onclick="toggleCheck(this)">Topological Sort</li>
+                <li onclick="toggleCheck(this)">Bellman Ford</li>
+                <li onclick="toggleCheck(this)">A* pathfinding Algorithm</li>
+                <!-- ... add other Graphs topics similarly -->
+            </ul>
+        </section>
+    </div>
 
-<div id="checklist">
-    <section>
-        <h3>Dynamic Programming</h3>
-        <ul>
-            <li onclick="toggleCheck(this)">Introduction</li>
-            <li onclick="toggleCheck(this)">Recursion</li>
-            <li onclick="toggleCheck(this)">Recursion DP</li>
-            <li onclick="toggleCheck(this)">Iteration</li>
-            <li onclick="toggleCheck(this)">Iteration Space Optimized</li>
-            <li onclick="toggleCheck(this)">Complexity Analysis</li>
-            <li onclick="toggleCheck(this)">0/1 Knapsack</li>
-            <li onclick="toggleCheck(this)">Subset Questions</li>
-            <li onclick="toggleCheck(this)">Unbounded Knapsack</li>
-            <li onclick="toggleCheck(this)">String DP</li>
-            <li onclick="toggleCheck(this)">Subsequence questions</li>
-            <!-- ... add other DP topics similarly -->
-        </ul>
-    </section>
-    <section>
-        <h3>Trees</h3>
-        <ul>
-            <li onclick="toggleCheck(this)">Introduction</li>
-            <li onclick="toggleCheck(this)">Binary Trees</li>
-            <li onclick="toggleCheck(this)">Binary Search Trees</li>
-            <li onclick="toggleCheck(this)">DFS</li>
-            <li onclick="toggleCheck(this)">BFS</li>
-            <li onclick="toggleCheck(this)">AVL Trees</li>
-            <li onclick="toggleCheck(this)">Segment Tree</li>
-            <li onclick="toggleCheck(this)">Fenwick Tree / Binary Indexed Tree</li>
-            <li onclick="toggleCheck(this)">Square Root Decomposition</li>
-            <!-- ... add other Trees topics similarly -->
-        </ul>
-    </section>
-    <section>
-        <h3>Heaps</h3>
-        <ul>
-            <li onclick="toggleCheck(this)">Introduction</li>
-            <li onclick="toggleCheck(this)">Theory</li>
-            <li onclick="toggleCheck(this)">Priority Queue</li>
-            <li onclick="toggleCheck(this)">Two Heaps Method</li>
-            <li onclick="toggleCheck(this)">k-way merge</li>
-            <li onclick="toggleCheck(this)">top k elements</li>
-            <li onclick="toggleCheck(this)">interval problems</li>
-            <!-- ... add other Heaps topics similarly -->
-        </ul>
-    </section>
-    <section>
-        <h3>Graphs</h3>
-        <ul>
-            <li onclick="toggleCheck(this)">Introduction</li>
-            <li onclick="toggleCheck(this)">BFS</li>
-            <li onclick="toggleCheck(this)">DFS</li>
-            <li onclick="toggleCheck(this)">Working with graph components</li>
-            <li onclick="toggleCheck(this)">Minimum Spanning Trees</li>
-            <li onclick="toggleCheck(this)">Kruskal Algorithm</li>
-            <li onclick="toggleCheck(this)">Prims Algorithm</li>
-            <li onclick="toggleCheck(this)">Dijkstra’s shortest path algorithm</li>
-            <li onclick="toggleCheck(this)">Topological Sort</li>
-            <li onclick="toggleCheck(this)">Bellman Ford</li>
-            <li onclick="toggleCheck(this)">A* pathfinding Algorithm</li>
-            <!-- ... add other Graphs topics similarly -->
-        </ul>
-    </section>
-</div>
+    <script>
+        // Function to toggle check and save the state in localStorage
+        function toggleCheck(element) {
+            element.classList.toggle('checked');
+            const topicName = element.textContent.trim();
+            const isChecked = element.classList.contains('checked');
+            
+            // Store the state in localStorage
+            localStorage.setItem(topicName, isChecked);
+        }
 
-<script>
-    function toggleCheck(element) {
-        element.classList.toggle('checked');
-    }
+        // Function to initialize the checklist based on localStorage
+        function initializeChecklist() {
+            const listItems = document.querySelectorAll('li');
+            listItems.forEach((item) => {
+                const topicName = item.textContent.trim();
+                const isChecked = localStorage.getItem(topicName) === 'true';
 
-</script>
+                if (isChecked) {
+                    item.classList.add('checked');
+                }
+            });
+        }
 
+        // Call the initialization function when the page loads
+        window.addEventListener('load', initializeChecklist);
+    </script>
 </body>
 </html>
+
